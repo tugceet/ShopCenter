@@ -12,8 +12,8 @@ using ShopCenter.Infrastructure.Context;
 namespace ShopCenter.Infrastructure.Migrations
 {
     [DbContext(typeof(ShopCenterContext))]
-    [Migration("20240808081553_first")]
-    partial class first
+    [Migration("20240808103116_FirstMigration")]
+    partial class FirstMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

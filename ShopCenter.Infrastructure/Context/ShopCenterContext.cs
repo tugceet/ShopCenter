@@ -7,7 +7,7 @@ namespace ShopCenter.Infrastructure.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("DESKTOP-944RVAP;initial Catalog=ShopCenterDb;integrated Security=true;TrustServerCertificate= true;");//BURANIN İÇİNE CONN STRİNG YAZILACAK
+            optionsBuilder.UseSqlServer("Server=DESKTOP-944RVAP;initial Catalog=ShopCenterDb;integrated Security=true;TrustServerCertificate= true;");//BURANIN İÇİNE CONN STRİNG YAZILACAK
         }
 
         public DbSet<Admin> Admins{ get; set; }
