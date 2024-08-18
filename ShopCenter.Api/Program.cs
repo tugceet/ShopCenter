@@ -14,13 +14,11 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Register the DbContext
-builder.Services.AddDbContext<ShopCenterContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
 
 
 // Register repositories
-builder.Services.AddScoped<IRepository<Admin>, Repository<Admin>>();
+builder.Services.AddScoped(typeof(  IRepository<>), typeof(Repository<>));
 
 
 builder.Services.AddScoped<ShopCenterContext, ShopCenterContext>();
